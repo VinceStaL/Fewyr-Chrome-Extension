@@ -154,9 +154,17 @@ input, select {
 #user-actions {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
 }
 
+#user-actions .btn,
+#user-actions .copy-container {
+    margin: 0;
+}
+
+#user-actions .copy-container {
+    display: inline-flex;
+    margin-left: 0.4rem;
+}
 .form-actions {
     display: flex;
     justify-content: flex-start;
