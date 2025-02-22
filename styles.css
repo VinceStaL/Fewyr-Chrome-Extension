@@ -226,6 +226,15 @@ input, select {
     background-color: #cccccc;
 }
 
+.btn-black {
+    background-color: #000000;
+    color: white;
+}
+
+.btn-black:hover {
+    background-color: #333333;
+}
+
 @media (max-width: 768px) {
     .sticky-header {
         padding: 0.6rem 0;

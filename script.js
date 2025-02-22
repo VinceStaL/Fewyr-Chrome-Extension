@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('resetBtn').addEventListener('click', () => {
+        document.getElementById('meetingForm').reset();
+        const agendaItems = document.getElementById('agendaItems');
+        agendaItems.innerHTML = '';
+        document.getElementById('participants').value = '';
+        createAgendaItem(1);
+    });
+
     const meetingForm = document.getElementById('meetingForm');
     const addAgendaItemBtn = document.getElementById('addAgendaItem');
     const agendaItems = document.getElementById('agendaItems');
