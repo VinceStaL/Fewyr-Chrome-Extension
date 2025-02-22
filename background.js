@@ -9,6 +9,12 @@ chrome.runtime.onInstalled.addListener((details) => {
     }
 });
 
+// Handle extension icon click
+chrome.action.onClicked.addListener((tab) => {
+    // Open the side panel when the extension icon is clicked
+    chrome.sidePanel.open({ windowId: tab.windowId });
+});
+
 // Listen for messages from the popup
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === 'GET_MEETING_DATA') {
