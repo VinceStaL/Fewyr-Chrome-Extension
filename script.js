@@ -179,11 +179,33 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Form submitted:', formDataObj);
     });
 
+    // Function to format date with English month spelling
+    function formatDate(dateString) {
+        if (!dateString) return '';
+        const date = new Date(dateString);
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
+    // Add event listener to format date input display
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+        dateInput.addEventListener('change', (e) => {
+            const formattedDate = formatDate(e.target.value);
+            if (formattedDate) {
+                e.target.setAttribute('data-formatted-date', formattedDate);
+            }
+        });
+    }
+
     function getMeetingDetails() {
         if (!elements.participants) return '';
         
         const title = document.getElementById('title')?.value || '';
-        const date = document.getElementById('date')?.value || '';
+        const dateInput = document.getElementById('date');
+        const date = dateInput ? formatDate(dateInput.value) : '';
         const createdBy = document.getElementById('createdBy')?.value || '';
         const participants = elements.participants.value || '';
 

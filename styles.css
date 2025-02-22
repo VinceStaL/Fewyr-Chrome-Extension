@@ -98,6 +98,20 @@ input, select {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 0.85rem;
+    input[type="date"] {
+        position: relative;
+    }
+    
+    input[type="date"]:not(:focus):not(:invalid)[data-formatted-date]::-webkit-datetime-edit {
+        color: transparent;
+    }
+    
+    input[type="date"]:not(:focus):not(:invalid)[data-formatted-date]::before {
+        content: attr(data-formatted-date);
+        position: absolute;
+        left: 0.3rem;
+        color: #000;
+    }
 }
 
 .btn {
