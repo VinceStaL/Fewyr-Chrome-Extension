@@ -25,7 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
         elements.meetingForm.reset();
         elements.agendaItems.innerHTML = '';
         elements.participants.value = '';
+        topicNumber = 1;
         createAgendaItem(1);
+        topicNumber++;
     });
 
     // Initialize topic counter
