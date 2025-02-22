@@ -16,6 +16,9 @@ body {
     color: var(--text-color);
     padding-top: 60px;
     font-size: 13px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 400px;
 }
 
 .sticky-header {
@@ -29,8 +32,8 @@ body {
 }
 
 .header-content {
-    width: 80%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 380px;
     margin: 0 auto;
     padding: 0.6rem 0;
     display: flex;
@@ -60,14 +63,14 @@ h1 {
 .subtitle {
     margin: 0;
     padding: 0;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     color: #666;
     font-weight: 300;
 }
 
 main {
-    padding: 1.4rem;
-    max-width: 800px;
+    padding: 1rem;
+    max-width: 380px;
     margin: 0 auto;
 }
 
@@ -95,6 +98,20 @@ input, select {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 0.85rem;
+    input[type="date"] {
+        position: relative;
+    }
+    
+    input[type="date"]:not(:focus):not(:invalid)[data-formatted-date]::-webkit-datetime-edit {
+        color: transparent;
+    }
+    
+    input[type="date"]:not(:focus):not(:invalid)[data-formatted-date]::before {
+        content: attr(data-formatted-date);
+        position: absolute;
+        left: 0.3rem;
+        color: #000;
+    }
 }
 
 .btn {
@@ -151,9 +168,30 @@ input, select {
 #user-actions {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    margin-top: 0.6rem;
+    gap: 0.4rem;
 }
 
+#user-actions .btn,
+#user-actions .copy-container {
+    margin: 0;
+    flex: 1;
+}
+
+#user-actions .copy-container {
+    display: inline-flex;
+}
+
+#user-actions .btn {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    line-height: 1;
+}
 .form-actions {
     display: flex;
     justify-content: flex-start;
@@ -164,8 +202,8 @@ input, select {
 }
 
 .form-actions > * {
-    flex: 0 1 calc(33.333% - 0.4rem);
-    max-width: calc(33.333% - 0.4rem);
+    flex: 0 1 calc(40% - 0.4rem);
+    max-width: calc(40% - 0.4rem);
 }
 
 .form-actions .copy-container {
@@ -192,12 +230,13 @@ input, select {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: 0 0.6rem;
+    padding: 0 0.8rem;
     line-height: 1;
     font-size: 0.85rem;
+    min-width: fit-content;
 }
 
 .form-actions .copy-container .btn {
@@ -221,6 +260,15 @@ input, select {
 
 .btn-disabled:hover {
     background-color: #cccccc;
+}
+
+.btn-black {
+    background-color: #000000;
+    color: white;
+}
+
+.btn-black:hover {
+    background-color: #333333;
 }
 
 @media (max-width: 768px) {
