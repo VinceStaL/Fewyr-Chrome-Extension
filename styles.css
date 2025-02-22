@@ -154,16 +154,29 @@ input, select {
 #user-actions {
     display: flex;
     align-items: center;
+    margin-top: 0.6rem;
+    gap: 0.4rem;
 }
 
 #user-actions .btn,
 #user-actions .copy-container {
     margin: 0;
+    flex: 1;
 }
 
 #user-actions .copy-container {
     display: inline-flex;
-    margin-left: 0.4rem;
+}
+
+#user-actions .btn {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    line-height: 1;
 }
 .form-actions {
     display: flex;
@@ -203,12 +216,13 @@ input, select {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: 0 0.8rem;
     line-height: 1;
     font-size: 0.8rem;
+    min-width: fit-content;
 }
 
 .form-actions .copy-container .btn {
