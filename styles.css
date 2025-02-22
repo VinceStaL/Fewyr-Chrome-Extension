@@ -1,0 +1,254 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --card-background: #fff;
+    --header-background: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding-top: 60px;
+    font-size: 13px;
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--header-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header-content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.6rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.subtitle {
+    margin: 0;
+    padding: 0;
+    font-size: 0.65rem;
+    color: #666;
+    font-weight: 300;
+}
+
+main {
+    padding: 1.4rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.4rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.3rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #27ae60;
+}
+
+.agenda-item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.7rem;
+    margin-top: 0.7rem;
+    background-color: #f9f9f9;
+}
+
+.copy-container {
+    position: relative;
+    display: inline-block;
+}
+
+.copy-msg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -16px;
+    font-size: 0.65rem;
+    color: #666;
+    white-space: nowrap;
+    background-color: transparent;
+}
+
+#user-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    align-items: stretch;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.form-actions > * {
+    flex: 0 1 calc(33.333% - 0.4rem);
+    max-width: calc(33.333% - 0.4rem);
+}
+
+.form-actions .copy-container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+}
+
+#addAgendaItem {
+    order: 0;
+}
+
+#saveMeetingBtn {
+    order: 2;
+    margin-left: auto;
+}
+
+.form-actions .btn,
+.form-actions .copy-container .btn {
+    width: 100%;
+    height: 2rem;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.6rem;
+    line-height: 1;
+    font-size: 0.85rem;
+}
+
+.form-actions .copy-container .btn {
+    height: 100%;
+}
+
+.btn-black {
+    background-color: #000000;
+    color: white;
+}
+
+.btn-black:hover {
+    background-color: #333333;
+}
+
+.btn-disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.btn-disabled:hover {
+    background-color: #cccccc;
+}
+
+@media (max-width: 768px) {
+    .sticky-header {
+        padding: 0.6rem 0;
+    }
+
+    .header-content {
+        width: 90%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #user-actions {
+        margin-top: 0.6rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    body {
+        padding-top: 90px;
+    }
+
+    .copy-container {
+        margin-top: 0.3rem;
+    }
+
+    .copy-msg {
+        bottom: -14px;
+    }
+}
