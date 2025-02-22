@@ -1,5 +1,9 @@
 # Fewyr - Meeting Agenda Manager
 
+![Screenshot](./images/1.png)
+![Screenshot](./images/2.png)
+![Screenshot](./images/3.png)
+
 Fewyr is a Chrome extension that helps you create clear, structured meeting agendas efficiently. It aims to reduce the number of meetings by making each one more focused and productive.
 
 ## Features
