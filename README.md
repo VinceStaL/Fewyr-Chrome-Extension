@@ -47,16 +47,6 @@ Fewyr is a Chrome extension that helps you create clear, structured meeting agen
 4. Click "Load unpacked" and select the extension directory
 5. The extension should now appear in your Chrome toolbar
 
-### Project Structure
-
-```
-├── manifest.json      # Extension configuration
-├── background.js      # Service worker for background tasks
-├── index.html        # Main UI
-├── script.js         # Main application logic
-├── styles.css        # Styling
-└── icons/            # Extension icons
-```
 
 ## Contributing
 
