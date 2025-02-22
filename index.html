@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fewyr - clear agendas, less meetings</title>
-    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,15 +11,12 @@
     <header class="sticky-header">
         <div class="header-content">
             <div class="title-container">
-                <a href="." class="title-link">
+                <div class="title-link">
                     <h1>Fewyr</h1>
                     <p class="subtitle">clear agendas, less meetings</p>
-                </a>
+                </div>
             </div>
             <div id="user-actions">
-                <button id="signInBtn" class="btn btn-disabled" disabled>Sign in (coming soon)</button>
-                <button id="shareBtn" class="btn btn-secondary" style="display: none;">Share</button>
-                <button id="signOutBtn" class="btn btn-secondary" style="display: none;">Sign Out</button>
                 <div class="copy-container">
                     <button id="copyBtn" class="btn btn-primary">Copy</button>
                     <span id="copyMsg" class="copy-msg" style="display: none;">Copied!</span>
@@ -60,7 +56,6 @@
                     <button type="button" id="copyMeetingBtn" class="btn btn-primary">Copy Agenda</button>
                     <span id="copyMeetingMsg" class="copy-msg" style="display: none;">Copied!</span>
                 </div>
-                <button type="submit" id="saveMeetingBtn" class="btn btn-black" style="display: none;">Save Meeting</button>
             </div>
         </form>
     </main>
