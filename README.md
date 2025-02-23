@@ -1,4 +1,4 @@
-# Fewyr - Meeting Agenda Manager
+# Fewyr - Clear agendas, less meetings
 
 ![Screenshot](./images/1.png)
 ![Screenshot](./images/2.png)
