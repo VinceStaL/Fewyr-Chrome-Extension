@@ -10,6 +10,11 @@ Fewyr is designed with a single, focused purpose: to help users create and manag
 - **Why we need it:** This permission is essential for the core functionality of copying the formatted meeting agenda to share with others
 - **How it's used:** Only activated when users explicitly click the "Copy" or "Copy Agenda" buttons
 
+### sidePanel
+- **What it does:** Allows the extension to open in Chrome's side panel
+- **Why we need it:** This provides a convenient, persistent workspace for creating meeting agendas while viewing other tabs
+- **How it's used:** The extension interface opens in the side panel, allowing users to create agendas while referencing other content
+
 ## Data Collection and Storage
 
 ### Local Storage
