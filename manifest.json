@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Fewyr - clear agendas, fewer meetings",
   "version": "1.0.1",
-  "description": "Create clear meeting agendas with less meetings",
+  "description": "Create clear meeting agendas with fewer meetings",
   "action": {
     "default_icon": {
       "16": "icons/icon16.png",
