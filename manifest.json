@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Fewyr - Meeting Agenda Manager",
+  "name": "Fewyr - clear agendas, fewer meetings",
   "version": "1.0.1",
   "description": "Create clear meeting agendas with less meetings",
   "action": {
@@ -9,7 +9,7 @@
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     },
-    "default_title": "Open Fewyr Meeting Agenda Manager"
+    "default_title": "Open Fewyr"
   },
   "permissions": [
     "clipboardWrite",
