@@ -28,8 +28,8 @@ Fewyr is a Chrome extension that helps you create clear, structured meeting agen
    - Date
    - Title
    - Created By
-3. Add agenda items:
-   - Click "Add Agenda Item" to add new topics
+3. Add topics:
+   - Click "Add Topic" to add new topics
    - Specify the topic, objective, and audience for each item
    - The participants list will auto-populate based on the audience field
 4. Use the "Copy Agenda" button to copy the formatted agenda to your clipboard
